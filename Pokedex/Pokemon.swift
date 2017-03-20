@@ -10,8 +10,8 @@ import Foundation
 
 class Pokemon {
     
-    private var _name: String!
-    private var _pokedexID: Int!
+    fileprivate var _name: String!
+    fileprivate var _pokedexID: Int!
     
     var name: String {
 //        if _name == nil {
@@ -27,7 +27,7 @@ class Pokemon {
         return _pokedexID
     }
     
-    init(name: String, pokedexID: Int){
+    init(name: String, pokedexID: Int) {
         self._name = name
         self._pokedexID = pokedexID
     }
