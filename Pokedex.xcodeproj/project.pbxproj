@@ -16,6 +16,10 @@
 		DECCE8FB1E7F79D600BE402C /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECCE8FA1E7F79D600BE402C /* Pokemon.swift */; };
 		DECCE8FF1E7F821600BE402C /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECCE8FE1E7F821600BE402C /* PokeCell.swift */; };
 		DECCE9011E7F8CCC00BE402C /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECCE9001E7F8CCC00BE402C /* csv.swift */; };
+		DED917D41E7F92810060C394 /* Pokemon Hollow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DED917D21E7F92810060C394 /* Pokemon Hollow.ttf */; };
+		DED917D51E7F92810060C394 /* Pokemon Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DED917D31E7F92810060C394 /* Pokemon Solid.ttf */; };
+		DED917D91E7F94470060C394 /* music.png in Resources */ = {isa = PBXBuildFile; fileRef = DED917D81E7F94470060C394 /* music.png */; };
+		DED917DB1E7F95DF0060C394 /* 03-normal-battle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DED917DA1E7F95DF0060C394 /* 03-normal-battle.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		DECCE8FA1E7F79D600BE402C /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		DECCE8FE1E7F821600BE402C /* PokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
 		DECCE9001E7F8CCC00BE402C /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
+		DED917D21E7F92810060C394 /* Pokemon Hollow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Hollow.ttf"; sourceTree = "<group>"; };
+		DED917D31E7F92810060C394 /* Pokemon Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Solid.ttf"; sourceTree = "<group>"; };
+		DED917D81E7F94470060C394 /* music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = music.png; sourceTree = "<group>"; };
+		DED917DA1E7F95DF0060C394 /* 03-normal-battle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "03-normal-battle.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,11 +73,11 @@
 				DECCE8F91E7F79C800BE402C /* Model */,
 				DECCE8FC1E7F7AC800BE402C /* View */,
 				DECCE8FD1E7F7AD200BE402C /* Controller */,
+				DED917D71E7F92A80060C394 /* Utilities */,
+				DED917D61E7F92990060C394 /* Resources */,
 				DECCE8E51E7F766200BE402C /* AppDelegate.swift */,
 				DECCE8E91E7F766200BE402C /* Main.storyboard */,
 				DECCE8EC1E7F766300BE402C /* Assets.xcassets */,
-				DECCE9001E7F8CCC00BE402C /* csv.swift */,
-				DECCE8F71E7F793300BE402C /* pokemon.csv */,
 				DECCE8EE1E7F766300BE402C /* LaunchScreen.storyboard */,
 				DECCE8F11E7F766300BE402C /* Info.plist */,
 			);
@@ -98,6 +106,26 @@
 				DECCE8E71E7F766200BE402C /* MainViewController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		DED917D61E7F92990060C394 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DED917D21E7F92810060C394 /* Pokemon Hollow.ttf */,
+				DED917D31E7F92810060C394 /* Pokemon Solid.ttf */,
+				DECCE8F71E7F793300BE402C /* pokemon.csv */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		DED917D71E7F92A80060C394 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DECCE9001E7F8CCC00BE402C /* csv.swift */,
+				DED917D81E7F94470060C394 /* music.png */,
+				DED917DA1E7F95DF0060C394 /* 03-normal-battle.mp3 */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,7 +190,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DECCE8F01E7F766300BE402C /* LaunchScreen.storyboard in Resources */,
+				DED917D91E7F94470060C394 /* music.png in Resources */,
 				DECCE8ED1E7F766300BE402C /* Assets.xcassets in Resources */,
+				DED917D41E7F92810060C394 /* Pokemon Hollow.ttf in Resources */,
+				DED917DB1E7F95DF0060C394 /* 03-normal-battle.mp3 in Resources */,
+				DED917D51E7F92810060C394 /* Pokemon Solid.ttf in Resources */,
 				DECCE8F81E7F793300BE402C /* pokemon.csv in Resources */,
 				DECCE8EB1E7F766200BE402C /* Main.storyboard in Resources */,
 			);
@@ -343,6 +375,7 @@
 				DECCE8F61E7F766300BE402C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
