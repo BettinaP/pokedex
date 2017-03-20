@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+
 
 class PokemonDetailViewController: UIViewController {
 
@@ -40,11 +42,18 @@ class PokemonDetailViewController: UIViewController {
     @IBOutlet weak var currentEvoImg: UIImageView!
     
     @IBOutlet weak var nextEvoImg: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         detailNameLabel.text = detailPoke.name
-        // Do any additional setup after loading the view.
+        
+        detailPoke.downloadPokemonDetails {
+            // code below will only be called after the network call is complete.
+            self.updateUI()
+            
+        }
     }
 
    
@@ -52,4 +61,7 @@ class PokemonDetailViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
 
+    func updateUI() {
+        
+    }
 }
