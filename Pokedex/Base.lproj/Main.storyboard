@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Pokemon Hollow.ttf">
+            <string>PokemonHollowNormal</string>
+        </array>
         <array key="Pokemon Solid.ttf">
             <string>PokemonSolidNormal</string>
         </array>
@@ -35,7 +38,7 @@
                                             <constraint firstAttribute="height" constant="43" id="IaH-Kr-Kmu"/>
                                             <constraint firstAttribute="width" constant="154" id="zFg-a3-5Gy"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="36"/>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="32"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -60,7 +63,7 @@
                                     <constraint firstAttribute="trailing" secondItem="fZm-AG-DYl" secondAttribute="trailing" constant="8" id="yk2-pf-88i"/>
                                 </constraints>
                             </view>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="bhc-n5-TfI">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search Pokemon" translatesAutoresizingMaskIntoConstraints="NO" id="bhc-n5-TfI">
                                 <rect key="frame" x="0.0" y="65" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="obb-eJ-0KQ"/>
@@ -143,11 +146,46 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="8nB-tW-GZp" id="xlg-3w-0BX"/>
+                        <outlet property="searchBar" destination="bhc-n5-TfI" id="zSg-TS-k4y"/>
+                        <segue destination="LEf-0G-6cB" kind="show" identifier="toPokemonDetailVC" id="XCp-Hn-nrR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--Pokemon Detail View Controller-->
+        <scene sceneID="FJz-Ag-hhy">
+            <objects>
+                <viewController id="LEf-0G-6cB" customClass="PokemonDetailViewController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e4h-LP-Yme"/>
+                        <viewControllerLayoutGuide type="bottom" id="7oE-2T-yF0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rjM-xv-UkH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9p-ku-eQZ">
+                                <rect key="frame" x="155" y="314" width="65.5" height="39.5"/>
+                                <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.13703292489999999" green="0.6306561772" blue="0.99835759400000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="j9p-ku-eQZ" firstAttribute="centerX" secondItem="rjM-xv-UkH" secondAttribute="centerX" id="gDt-tV-XdH"/>
+                            <constraint firstItem="j9p-ku-eQZ" firstAttribute="centerY" secondItem="rjM-xv-UkH" secondAttribute="centerY" id="jh4-Pp-hnI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailNameLabel" destination="j9p-ku-eQZ" id="0wM-R0-ocV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Hh-KC-hdp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892" y="146.17691154422789"/>
         </scene>
     </scenes>
     <resources>
